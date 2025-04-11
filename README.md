@@ -1,8 +1,7 @@
 # WebSec-AI: Advanced Web Security Testing Framework
 
 <div align="center">
-
-![WebSec-AI Logo](https://github.com/user-attachments/assets/bdd07564-5238-40f7-aaaa-777f2aa4a380)
+<img src="https://github.com/user-attachments/assets/bdd07564-5238-40f7-aaaa-777f2aa4a380" width="150" alt="WebSec-AI Logo">
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
