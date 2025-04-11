@@ -1,0 +1,150 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.python-version
+venv/
+ENV/
+env/
+.venv/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.project
+.pydevproject
+.settings/
+
+# Project specific
+reports/
+*.html
+*.json
+*.log
+*.csv
+*.xml
+*.pdf
+*.docx
+*.xlsx
+*.db
+*.sqlite3
+
+# Security testing artifacts
+burp_state/
+zap_state/
+*.pcap
+*.cap
+*.har
+*.json.gz
+*.json.bz2
+*.json.xz
+
+# AI/LLM specific
+model_cache/
+token_cache/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Coverage reports
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Local development
+local_settings.py
+instance/
+.webassets-cache
+
+# Logs and databases
+logs/
+*.log
+*.sqlite
+*.db
+
+# Test results
+test_results/
+test_output/
+junit.xml
+test-reports/
+
+# Dependencies
+node_modules/
+bower_components/
+
+# Build output
+build/
+dist/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.project
+.pydevproject
+.settings/
+
+# Documentation
+docs/_build/
+site/
+
+# Misc
+.DS_Store
+Thumbs.db 

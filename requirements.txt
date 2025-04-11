@@ -1,0 +1,15 @@
+selenium==4.18.1
+requests==2.31.0
+beautifulsoup4==4.12.3
+python-nmap==0.7.1
+sqlmap-python==1.7.2
+burp-rest-api==2.0.0
+python-owasp-zap-v2.4==0.0.20
+python-whois==0.8.0
+dnspython==2.5.0
+cryptography==42.0.5
+python-nmap==0.7.1
+aiohttp==3.9.3
+asyncio==3.4.3
+pytest==8.0.2
+pytest-asyncio==0.23.5 
