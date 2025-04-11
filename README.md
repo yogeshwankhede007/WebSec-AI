@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![WebSec-AI Logo](assets/logo.png)
+![WebSec-AI Logo](https://github.com/user-attachments/assets/bdd07564-5238-40f7-aaaa-777f2aa4a380)
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -144,7 +144,7 @@ graph TD
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/WebSec-AI.git
+git clone git@github.com:yogeshwankhede007/WebSec-AI.git
 cd WebSec-AI
 
 # Install dependencies
