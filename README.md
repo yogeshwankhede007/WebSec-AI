@@ -1,12 +1,12 @@
 # WebSec-AI: Advanced Web Security Testing Framework
 
 <div align="center">
-
-![WebSec-AI Logo](assets/logo.png)
+<img src="https://github.com/user-attachments/assets/bdd07564-5238-40f7-aaaa-777f2aa4a380" width="150" alt="WebSec-AI Logo">
+</div>
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Security Tests](https://img.shields.io/badge/security-tests-passing-brightgreen.svg)](tests/)
+[![Security Tests](https://img.shields.io/badge/security%20tests-passing-brightgreen.svg)](tests/)
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](tests/)
 
 A comprehensive security testing framework for web applications, powered by AI-driven analysis and automated testing capabilities.
@@ -15,8 +15,6 @@ A comprehensive security testing framework for web applications, powered by AI-d
 [Features](#features) •
 [Documentation](#documentation) •
 [Contributing](#contributing)
-
-</div>
 
 ## 🚀 Features
 
@@ -234,7 +232,15 @@ The framework generates detailed reports including:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We ❤️ contributions from the community! Whether you're reporting bugs, suggesting features, or submitting code, your help is invaluable. Please check out our detailed [Contributing Guide](CONTRIBUTING.md) to get started.
+
+Key ways to contribute:
+- 🐛 Report bugs
+- 💡 Suggest features
+- 📝 Improve documentation
+- 🛠️ Submit code changes
+
+We appreciate every contribution, no matter how small! See our [Contributing Guide](CONTRIBUTING.md) for more details.
 
 ## 📄 License
 
@@ -249,5 +255,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-Made with ❤️ by [Your Name/Organization]
+Made with ❤️ by [Yogesh W.]
 </div> 
