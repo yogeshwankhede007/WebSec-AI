@@ -242,6 +242,8 @@ Key ways to contribute:
 
 We appreciate every contribution, no matter how small! See our [Contributing Guide](CONTRIBUTING.md) for more details.
 
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
