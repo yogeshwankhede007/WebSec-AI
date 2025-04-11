@@ -5,7 +5,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Security Tests](https://img.shields.io/badge/security-tests-passing-brightgreen.svg)](tests/)
+[![Security Tests](https://img.shields.io/badge/security%20tests-passing-brightgreen.svg)](tests/)
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](tests/)
 
 A comprehensive security testing framework for web applications, powered by AI-driven analysis and automated testing capabilities.
