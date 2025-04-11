@@ -142,7 +142,7 @@ graph TD
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/WebSec-AI.git
+git clone git@github.com:yogeshwankhede007/WebSec-AI.git
 cd WebSec-AI
 
 # Install dependencies
@@ -256,4 +256,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 Made with ❤️ by [Yogesh W.]
-</div> 
+</div>
