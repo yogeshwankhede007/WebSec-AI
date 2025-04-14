@@ -1,4 +1,4 @@
-# Web Security Testing Framework
+# WebSec-AI (Web Security Testing Framework)
 
 A comprehensive security testing framework for web applications, organized by priority and type to ensure thorough coverage of security aspects.
 
@@ -111,8 +111,8 @@ The framework is organized into four priority levels, each containing specific s
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/web-security-framework.git
-   cd web-security-framework
+   git clone git@github.com:yogeshwankhede007/WebSec-AI.git
+   cd WebSec-AI
    ```
 
 2. Install dependencies:
@@ -195,8 +195,8 @@ We ❤️ contributions from the community! Whether you're reporting bugs, sugge
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/yourusername/web-security-framework.git
-   cd web-security-framework
+   git clone git@github.com:yogeshwankhede007/WebSec-AI.git
+   cd WebSec-AI
    ```
 
 2. **Create a Feature Branch**
@@ -224,7 +224,8 @@ We ❤️ contributions from the community! Whether you're reporting bugs, sugge
 
 ### Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. We are committed to providing a welcoming and inclusive environment for all contributors.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. 
+We are committed to providing a welcoming and inclusive environment for all contributors.
 
 ### Pull Request Process
 
@@ -265,8 +266,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ## Contact
 For questions or suggestions, please:
 - Open an issue on GitHub
-- Join our community chat
-- Contact the maintainers at maintainers@example.com
+- Contact the maintainers at yogi.wankhede007@gmail.com
 
 ---
 
