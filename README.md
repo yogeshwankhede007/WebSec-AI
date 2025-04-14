@@ -1,11 +1,11 @@
-# WebSec-AI (Web Security Testing Framework)
+# Web Security Testing Framework
 
 A comprehensive security testing framework for web applications, organized by priority and type to ensure thorough coverage of security aspects.
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Security Tests](https://img.shields.io/badge/security%20tests-passing-brightgreen.svg)](tests/)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](documentations/CODE_OF_CONDUCT.md)
 
 ## Framework Structure
 
@@ -13,7 +13,9 @@ A comprehensive security testing framework for web applications, organized by pr
 
 The framework is organized into four priority levels, each containing specific security test types:
 
-#### 1. Critical Priority Tests
+<details>
+<summary>1. Critical Priority Tests</summary>
+
 - **Authentication**
   - Session Management
   - Password Policies
@@ -39,8 +41,11 @@ The framework is organized into four priority levels, each containing specific s
 - **Business Logic**
   - Workflow Security
   - Business Rule Validation
+</details>
 
-#### 2. High Priority Tests
+<details>
+<summary>2. High Priority Tests</summary>
+
 - **Client Security**
   - Content Security Policy
   - XSS Protection
@@ -63,8 +68,11 @@ The framework is organized into four priority levels, each containing specific s
   - Directory Traversal
   - File Inclusion
   - Path Traversal
+</details>
 
-#### 3. Medium Priority Tests
+<details>
+<summary>3. Medium Priority Tests</summary>
+
 - **Infrastructure Security**
   - SSL/TLS Configuration
   - DNS Security
@@ -84,8 +92,11 @@ The framework is organized into four priority levels, each containing specific s
   - Session Fixation
   - Session Timeout
   - Session Regeneration
+</details>
 
-#### 4. Low Priority Tests
+<details>
+<summary>4. Low Priority Tests</summary>
+
 - **Information Disclosure**
   - Directory Listing
   - Version Disclosure
@@ -100,13 +111,14 @@ The framework is organized into four priority levels, each containing specific s
   - HTTP Methods
   - HTTP Headers
   - Robots.txt
+</details>
 
 ## Getting Started
 
 ### Prerequisites
 - Python 3.8+
-- Required Python packages (see requirements.txt)
-- Security testing tools (see TESTING_APPROACH.md)
+- Required Python packages (see [documentations/requirements.txt](documentations/requirements.txt))
+- Security testing tools (see [documentations/TESTING_APPROACH.md](documentations/TESTING_APPROACH.md))
 
 ### Installation
 1. Clone the repository:
@@ -117,7 +129,7 @@ The framework is organized into four priority levels, each containing specific s
 
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install -r documentations/requirements.txt
    ```
 
 3. Configure the framework:
@@ -140,9 +152,14 @@ The framework is organized into four priority levels, each containing specific s
    python run_security_tests.py --priority critical
    ```
 
-## Testing Approach
+## Documentation
 
-For detailed information about the testing approach, tools, and procedures, see [TESTING_APPROACH.md](tests/TESTING_APPROACH.md).
+All documentation files are located in the `documentations` folder:
+
+- [Testing Approach](documentations/TESTING_APPROACH.md)
+- [Contributing Guidelines](documentations/CONTRIBUTING.md)
+- [Code of Conduct](documentations/CODE_OF_CONDUCT.md)
+- [Requirements](documentations/requirements.txt)
 
 ## Directory Structure
 ```
@@ -150,6 +167,11 @@ For detailed information about the testing approach, tools, and procedures, see 
 ├── config/
 │   ├── config.py
 │   └── test_config.py
+├── documentations/
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CONTRIBUTING.md
+│   ├── TESTING_APPROACH.md
+│   └── requirements.txt
 ├── tests/
 │   ├── critical/
 │   │   ├── authentication/
@@ -174,7 +196,6 @@ For detailed information about the testing approach, tools, and procedures, see 
 ├── utils/
 │   ├── security_utils.py
 │   └── report_utils.py
-├── requirements.txt
 ├── run_security_tests.py
 └── README.md
 ```
@@ -188,74 +209,10 @@ For detailed information about the testing approach, tools, and procedures, see 
 - Ethical testing guidelines
 
 ## Contributing
+For detailed contribution guidelines, please see [documentations/CONTRIBUTING.md](documentations/CONTRIBUTING.md).
 
-We ❤️ contributions from the community! Whether you're reporting bugs, suggesting features, or submitting code, your help is invaluable.
-
-### How to Contribute
-
-1. **Fork the Repository**
-   ```bash
-   git clone git@github.com:yogeshwankhede007/WebSec-AI.git
-   cd WebSec-AI
-   ```
-
-2. **Create a Feature Branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-3. **Add Your Tests**
-   - Follow the organization structure (priority/type)
-   - Include comprehensive test cases
-   - Add necessary documentation
-
-4. **Submit a Pull Request**
-   - Provide clear description of changes
-   - Reference related issues
-   - Ensure all tests pass
-
-### Key Ways to Contribute
-- 🐛 Report bugs and security issues
-- 💡 Suggest new features and improvements
-- 📝 Improve documentation
-- 🛠️ Submit code changes
-- 🔍 Review pull requests
-- 📢 Share your experience
-
-### Code of Conduct
-
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. 
-We are committed to providing a welcoming and inclusive environment for all contributors.
-
-### Pull Request Process
-
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-2. Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent.
-4. The PR will be merged once you have the sign-off of at least one other developer, or if you do not have permission to do that, you may request the reviewer to merge it for you.
-
-### Development Setup
-
-1. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. Install development dependencies:
-   ```bash
-   pip install -r requirements-dev.txt
-   ```
-
-3. Run tests:
-   ```bash
-   pytest
-   ```
-
-4. Check code style:
-   ```bash
-   flake8
-   ```
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 - OWASP Testing Guide
@@ -271,5 +228,5 @@ For questions or suggestions, please:
 ---
 
 <div align="center">
-Made with ❤️ by Yogesh W
+Made with ❤️ by Yogesh W.
 </div>
