@@ -1,261 +1,275 @@
-# WebSec-AI: Advanced Web Security Testing Framework
+# Web Security Testing Framework
 
-<div align="center">
-<img src="https://github.com/user-attachments/assets/bdd07564-5238-40f7-aaaa-777f2aa4a380" width="150" alt="WebSec-AI Logo">
-</div>
+A comprehensive security testing framework for web applications, organized by priority and type to ensure thorough coverage of security aspects.
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Security Tests](https://img.shields.io/badge/security%20tests-passing-brightgreen.svg)](tests/)
-[![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](tests/)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-A comprehensive security testing framework for web applications, powered by AI-driven analysis and automated testing capabilities.
+## Framework Structure
 
-[Getting Started](#getting-started) •
-[Features](#features) •
-[Documentation](#documentation) •
-[Contributing](#contributing)
+### Test Organization
 
-## 🚀 Features
+The framework is organized into four priority levels, each containing specific security test types:
 
-### Core Security Testing Modules
+#### 1. Critical Priority Tests
+- **Authentication**
+  - Session Management
+  - Password Policies
+  - Multi-Factor Authentication
+  - Account Lockout
 
-- **Authentication Testing**
-  - Password policy validation
-  - Session management
-  - Multi-factor authentication
-  - Account lockout mechanisms
-  - Password reset functionality
+- **Authorization**
+  - Role-Based Access Control
+  - Horizontal Privilege Escalation
+  - Vertical Privilege Escalation
 
-- **API Security Testing**
-  - Endpoint authentication
-  - Rate limiting
-  - Input validation
-  - Response sanitization
-  - API version security
+- **Data Protection**
+  - Data Transmission Security
+  - Data Storage Security
+  - Data Encryption
+  - Sensitive Data Handling
 
-- **File Upload Security**
-  - File type validation
-  - Content verification
-  - Malware scanning
-  - Size restrictions
-  - Path traversal prevention
+- **API Security**
+  - API Authentication
+  - Rate Limiting
+  - Input Validation
 
-- **XSS Testing**
-  - Reflected XSS detection
-  - Stored XSS detection
-  - DOM-based XSS detection
-  - Input sanitization
-  - Output encoding
+- **Business Logic**
+  - Workflow Security
+  - Business Rule Validation
 
-- **CSRF Testing**
-  - Token validation
-  - Origin verification
-  - SameSite cookie checks
-  - Referrer policy validation
-  - Double submit cookie pattern
+#### 2. High Priority Tests
+- **Client Security**
+  - Content Security Policy
+  - XSS Protection
+  - Clickjacking Protection
 
-- **Information Gathering**
-  - Robots.txt exposure
-  - Sitemap.xml exposure
-  - Common sensitive files
-  - Technology fingerprinting
-  - User agent detection
+- **Input Validation**
+  - SQL Injection
+  - Cross-Site Scripting
+  - CSRF
+  - File Upload Security
+  - Command Injection
+  - XXE
 
-- **Configuration Management**
-  - HTTP methods testing
-  - Security headers validation
-  - File extension handling
-  - Directory listing exposure
-  - Error handling and information disclosure
+- **Cryptography**
+  - Crypto Implementation
+  - Key Management
+  - Random Number Generation
 
-- **AI Security Testing**
-  - Prompt injection detection
-  - Model security validation
-  - Output validation
-  - Supply chain security
-  - Access control verification
-  - Content safety checks
-  - Bias detection
-  - Adversarial attack testing
+- **Access Control**
+  - Directory Traversal
+  - File Inclusion
+  - Path Traversal
 
-## 🎯 Recent Security Breaches & Prevention
+#### 3. Medium Priority Tests
+- **Infrastructure Security**
+  - SSL/TLS Configuration
+  - DNS Security
+  - Network Security
 
-### AI/LLM Security Incidents
-1. **ChatGPT Data Leak (2023)**
-   - Issue: Users could see other users' chat history
-   - Prevention: Implemented in our framework through:
-     - Strict access control testing
-     - Data isolation verification
-     - Session management checks
+- **Error Handling**
+  - Error Messages
+  - Logging
+  - Stack Traces
 
-2. **Bard AI Misinformation (2023)**
-   - Issue: AI generated false information about stock prices
-   - Prevention: Enhanced through:
-     - Output validation testing
-     - Fact-checking mechanisms
-     - Source verification
+- **Configuration**
+  - Server Configuration
+  - Security Headers
+  - CORS
 
-3. **DALL-E Prompt Injection (2023)**
-   - Issue: Users bypassed content filters
-   - Prevention: Implemented via:
-     - Advanced prompt injection testing
-     - Content safety validation
-     - Filter bypass detection
+- **Session Management**
+  - Session Fixation
+  - Session Timeout
+  - Session Regeneration
 
-4. **Claude Data Extraction (2023)**
-   - Issue: Users extracted training data
-   - Prevention: Addressed through:
-     - Model inversion testing
-     - Training data protection
-     - Privacy boundary checks
+#### 4. Low Priority Tests
+- **Information Disclosure**
+  - Directory Listing
+  - Version Disclosure
+  - Technology Stack Disclosure
 
-## 📊 Framework Architecture
+- **Client Side**
+  - Client-Side Storage
+  - Local Storage
+  - Cookie Security
 
-```mermaid
-graph TD
-    A[WebSec-AI Framework] --> B[Core Security Tests]
-    A --> C[AI/LLM Security Tests]
-    A --> D[Network Security]
-    A --> E[Reporting System]
-    
-    B --> B1[Authentication]
-    B --> B2[API Security]
-    B --> B3[File Upload]
-    B --> B4[XSS/CSRF]
-    
-    C --> C1[Prompt Injection]
-    C --> C2[Model Security]
-    C --> C3[Output Validation]
-    C --> C4[Bias Detection]
-    
-    D --> D1[Port Scanning]
-    D --> D2[SSL/TLS]
-    D --> D3[DNS Security]
-    
-    E --> E1[HTML Reports]
-    E --> E2[JSON Reports]
-    E --> E3[Security Metrics]
-```
+- **Miscellaneous**
+  - HTTP Methods
+  - HTTP Headers
+  - Robots.txt
 
-## 🛠️ Installation
+## Getting Started
 
-```bash
-# Clone the repository
-git clone git@github.com:yogeshwankhede007/WebSec-AI.git
-cd WebSec-AI
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure your settings
-cp config.example.py config.py
-# Edit config.py with your settings
-```
-
-## 📋 Requirements
-
+### Prerequisites
 - Python 3.8+
-- Dependencies listed in `requirements.txt`
-- OpenAI API key (for AI security testing)
-- Target web application URL
+- Required Python packages (see requirements.txt)
+- Security testing tools (see TESTING_APPROACH.md)
 
-## 🚀 Usage
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/web-security-framework.git
+   cd web-security-framework
+   ```
 
-```bash
-# Run all security tests
-python run_security_tests.py
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Run specific test modules
-python -m pytest tests/test_authentication.py
-python -m pytest tests/test_api_security.py
-python -m pytest tests/test_file_upload.py
-python -m pytest tests/test_xss.py
-python -m pytest tests/test_csrf.py
-python -m pytest tests/test_info_gathering.py
-python -m pytest tests/test_config_management.py
-python -m pytest tests/test_ai_security.py
+3. Configure the framework:
+   - Update `config.py` with your target application details
+   - Set up environment variables if needed
+
+### Usage
+1. Run all tests:
+   ```bash
+   python run_security_tests.py
+   ```
+
+2. Run specific test categories:
+   ```bash
+   python run_security_tests.py --category authentication
+   ```
+
+3. Run tests by priority:
+   ```bash
+   python run_security_tests.py --priority critical
+   ```
+
+## Testing Approach
+
+For detailed information about the testing approach, tools, and procedures, see [TESTING_APPROACH.md](tests/TESTING_APPROACH.md).
+
+## Directory Structure
+```
+.
+├── config/
+│   ├── config.py
+│   └── test_config.py
+├── tests/
+│   ├── critical/
+│   │   ├── authentication/
+│   │   ├── authorization/
+│   │   ├── data_protection/
+│   │   ├── api_security/
+│   │   └── business_logic/
+│   ├── high/
+│   │   ├── client_security/
+│   │   ├── input_validation/
+│   │   ├── cryptography/
+│   │   └── access_control/
+│   ├── medium/
+│   │   ├── infrastructure_security/
+│   │   ├── error_handling/
+│   │   ├── configuration/
+│   │   └── session_management/
+│   └── low/
+│       ├── information_disclosure/
+│       ├── client_side/
+│       └── miscellaneous/
+├── utils/
+│   ├── security_utils.py
+│   └── report_utils.py
+├── requirements.txt
+├── run_security_tests.py
+└── README.md
 ```
 
-## 📊 Test Coverage
+## Features
+- Comprehensive security test coverage
+- Organized by priority and type
+- Automated and manual testing procedures
+- Detailed reporting and documentation
+- Continuous integration support
+- Ethical testing guidelines
 
-Our framework provides comprehensive coverage of OWASP Top 10 vulnerabilities and beyond:
+## Contributing
 
-1. **Information Gathering**
-   - Directory and file discovery
-   - Technology stack identification
-   - Sensitive information exposure
-   - User agent manipulation
+We ❤️ contributions from the community! Whether you're reporting bugs, suggesting features, or submitting code, your help is invaluable.
 
-2. **Configuration Management**
-   - Server configuration
-   - Security headers
-   - HTTP methods
-   - Error handling
-   - File handling
+### How to Contribute
 
-3. **Authentication & Authorization**
-   - Password policies
-   - Session management
-   - Access control
-   - MFA implementation
+1. **Fork the Repository**
+   ```bash
+   git clone https://github.com/yourusername/web-security-framework.git
+   cd web-security-framework
+   ```
 
-4. **Input Validation**
-   - SQL Injection
-   - XSS vulnerabilities
-   - File upload security
-   - API input validation
+2. **Create a Feature Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-5. **AI Security**
-   - Prompt injection
-   - Model security
-   - Output validation
-   - Bias detection
-   - Adversarial attacks
+3. **Add Your Tests**
+   - Follow the organization structure (priority/type)
+   - Include comprehensive test cases
+   - Add necessary documentation
 
-## 🔒 Security Best Practices
+4. **Submit a Pull Request**
+   - Provide clear description of changes
+   - Reference related issues
+   - Ensure all tests pass
 
-- Regular security updates
-- Automated vulnerability scanning
-- Continuous integration testing
-- AI-powered threat detection
-- Comprehensive reporting
-
-## 📝 Reporting
-
-The framework generates detailed reports including:
-- Vulnerability severity levels
-- Affected components
-- Recommended fixes
-- AI-generated remediation steps
-- Historical trend analysis
-
-## 🤝 Contributing
-
-We ❤️ contributions from the community! Whether you're reporting bugs, suggesting features, or submitting code, your help is invaluable. Please check out our detailed [Contributing Guide](CONTRIBUTING.md) to get started.
-
-Key ways to contribute:
-- 🐛 Report bugs
-- 💡 Suggest features
+### Key Ways to Contribute
+- 🐛 Report bugs and security issues
+- 💡 Suggest new features and improvements
 - 📝 Improve documentation
 - 🛠️ Submit code changes
+- 🔍 Review pull requests
+- 📢 Share your experience
 
-We appreciate every contribution, no matter how small! See our [Contributing Guide](CONTRIBUTING.md) for more details.
+### Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. We are committed to providing a welcoming and inclusive environment for all contributors.
 
-## 📄 License
+### Pull Request Process
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
+2. Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
+3. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent.
+4. The PR will be merged once you have the sign-off of at least one other developer, or if you do not have permission to do that, you may request the reviewer to merge it for you.
 
-## 🙏 Acknowledgments
+### Development Setup
 
-- OWASP for security guidelines
-- OpenAI for AI capabilities
-- Security research community
+1. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Install development dependencies:
+   ```bash
+   pip install -r requirements-dev.txt
+   ```
+
+3. Run tests:
+   ```bash
+   pytest
+   ```
+
+4. Check code style:
+   ```bash
+   flake8
+   ```
+
+## Acknowledgments
+- OWASP Testing Guide
+- Security testing community
+- Open source security tools
+- All contributors who have helped shape this project
+
+## Contact
+For questions or suggestions, please:
+- Open an issue on GitHub
+- Join our community chat
+- Contact the maintainers at maintainers@example.com
 
 ---
 
 <div align="center">
-Made with ❤️ by [Yogesh W.]
+Made with ❤️ by Yogesh W
 </div>
