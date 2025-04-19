@@ -1,99 +1,97 @@
-# WebSec-AI: Advanced Web Application Security Testing Framework
+# WebSec-AI: Advanced Web Security Testing Framework
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/bdd07564-5238-40f7-aaaa-777f2aa4a380" width="150" alt="WebSec-AI Logo">
+</div>
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Security Tests](https://img.shields.io/badge/security%20tests-passing-brightgreen.svg)](tests/)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-[![OWASP](https://img.shields.io/badge/OWASP-Compliant-orange.svg)](https://owasp.org/)
-[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](tests/)
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/yourusername/WebSec-AI/main/assets/logo.png" alt="WebSec-AI Logo" width="200"/>
-  
-  <p>
-    <strong>Advanced Web Application Security Testing Framework</strong>
-  </p>
-  <p>
-    Comprehensive security testing with AI-enhanced capabilities
-  </p>
-  
-  [![Documentation](https://img.shields.io/badge/documentation-available-brightgreen.svg)](docs/)
-  [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
-  [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](tests/)
-  [![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](requirements.txt)
-</div>
+A comprehensive security testing framework for web applications, powered by AI-driven analysis and automated testing capabilities.
 
-## 📋 Table of Contents
-- [Features](#-features)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [Test Categories](#-test-categories)
-- [Development](#-development)
-- [Security Best Practices](#-security-best-practices)
-- [Test Results](#-test-results)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
+[Getting Started](#getting-started) •
+[Features](#features) •
+[Documentation](#documentation) •
+[Contributing](#contributing)
 
-A comprehensive, AI-enhanced security testing framework for web applications, focusing on modern security challenges including AI/ML vulnerabilities.
-
-## 🛡️ Features
+## 🚀 Features
 
 ### Critical Security Tests
-- **Authentication Testing**
-  - Password policy enforcement
-  - Brute force protection
-  - Password reset functionality
-  - Multi-factor authentication (MFA)
 
-- **Authorization Testing**
+- **Authentication Testing** (`tests/critical/authentication.py`)
+  - Password policy validation
+  - Session management
+  - Multi-factor authentication
+  - Account lockout mechanisms
+  - Password reset functionality
+
+- **Authorization Testing** (`tests/critical/authorization.py`)
   - Role-based access control
   - Privilege escalation detection
   - Resource access control
   - API authorization
 
-- **Session Management**
+- **Session Management** (`tests/critical/session_management.py`)
   - Session fixation prevention
   - Session timeout enforcement
   - Concurrent session handling
   - Cookie security attributes
 
 ### High Priority Tests
-- **API Security**
-  - Authentication mechanisms
+
+- **API Security** (`tests/high/api_security.py`)
+  - Endpoint authentication
   - Rate limiting
   - Input validation
-  - Error handling
+  - Response sanitization
+  - API version security
 
-- **Data Protection**
+- **Data Protection** (`tests/high/data_protection.py`)
   - Data encryption (in transit and at rest)
   - Data integrity checks
   - Data retention policies
   - Access control mechanisms
 
-## 🚀 Getting Started
+## 📊 Framework Architecture
 
-### Prerequisites
-```bash
-python 3.8+
-requests
-pytest
-cryptography
+```mermaid
+graph TD
+    A[WebSec-AI Framework] --> B[Critical Tests]
+    A --> C[High Priority Tests]
+    A --> D[Test Organization]
+    
+    B --> B1[Authentication]
+    B --> B2[Authorization]
+    B --> B3[Session Management]
+    
+    C --> C1[API Security]
+    C --> C2[Data Protection]
+    
+    D --> D1[Cleanup]
+    D --> D2[Organization]
 ```
 
-### Installation
-1. Clone the repository:
+## 🛠️ Installation
+
 ```bash
-git clone https://github.com/yourusername/WebSec-AI.git
+# Clone the repository
+git clone git@github.com:yogeshwankhede007/WebSec-AI.git
 cd WebSec-AI
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### Running Tests
+## 📋 Requirements
+
+- Python 3.8+
+- Dependencies listed in `requirements.txt`
+- Target web application URL
+
+## 🚀 Usage
+
 ```bash
 # Run all security tests
 python -m pytest tests/
@@ -101,54 +99,46 @@ python -m pytest tests/
 # Run specific test categories
 python -m pytest tests/critical/  # Critical security tests
 python -m pytest tests/high/     # High priority tests
+
+# Run individual test modules
+python -m pytest tests/critical/authentication.py
+python -m pytest tests/critical/authorization.py
+python -m pytest tests/critical/session_management.py
+python -m pytest tests/high/api_security.py
+python -m pytest tests/high/data_protection.py
 ```
 
-## 📁 Project Structure
-```
-tests/
-├── critical/
-│   ├── authentication.py
-│   ├── authorization.py
-│   └── session_management.py
-├── high/
-│   ├── api_security.py
-│   └── data_protection.py
-├── cleanup.py
-└── organize_tests.py
-```
+## 📊 Test Coverage
 
-## 🔍 Test Categories
+Our framework provides comprehensive coverage of critical security aspects:
 
-### Critical Tests
-- **Authentication Tests**: Comprehensive testing of authentication mechanisms, password policies, and MFA implementation
-- **Authorization Tests**: Verification of access control, privilege management, and resource protection
-- **Session Management**: Testing session handling, timeout mechanisms, and cookie security
+1. **Authentication & Authorization**
+   - Password policies
+   - Session management
+   - Access control
+   - MFA implementation
 
-### High Priority Tests
-- **API Security**: Testing API endpoints for security vulnerabilities, rate limiting, and proper error handling
-- **Data Protection**: Verification of data encryption, integrity checks, and access controls
+2. **API Security**
+   - Endpoint authentication
+   - Rate limiting
+   - Input validation
+   - Response sanitization
 
-## 🛠️ Development
-
-### Adding New Tests
-1. Choose the appropriate priority level (critical/high)
-2. Create a new test file in the corresponding directory
-3. Implement test cases following the established patterns
-4. Update the test documentation
-
-### Code Style
-- Type hints for all function parameters and return values
-- Comprehensive error handling and logging
-- Clear documentation for all test cases
-- Consistent result formatting
+3. **Data Protection**
+   - Data encryption
+   - Data integrity
+   - Access control
+   - Retention policies
 
 ## 🔒 Security Best Practices
+
 - All tests are non-destructive by default
 - Rate limiting for aggressive tests
 - Proper error handling and logging
 - Secure credential management
 
 ## 📝 Test Results
+
 Test results are provided in a structured format:
 ```python
 {
@@ -159,15 +149,30 @@ Test results are provided in a structured format:
 ```
 
 ## 🤝 Contributing
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting pull requests.
+
+We ❤️ contributions from the community! Whether you're reporting bugs, suggesting features, or submitting code, your help is invaluable. Please check out our detailed [Contributing Guide](CONTRIBUTING.md) to get started.
+
+Key ways to contribute:
+- 🐛 Report bugs
+- 💡 Suggest features
+- 📝 Improve documentation
+- 🛠️ Submit code changes
+
+We appreciate every contribution, no matter how small! See our [Contributing Guide](CONTRIBUTING.md) for more details.
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ## 📄 License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-- OWASP Testing Guide
-- OWASP API Security Top 10
-- Web Security Testing Best Practices
+## �� Acknowledgments
+
+- OWASP for security guidelines
+- Security research community
 
 ---
-Made with ❤️ by [Your Name/Organization]
+
+<div align="center">
+Made with ❤️ by [Yogesh W.]
+</div>
