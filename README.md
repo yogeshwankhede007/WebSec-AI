@@ -18,124 +18,59 @@ A comprehensive security testing framework for web applications, powered by AI-d
 
 ## 🚀 Features
 
-### Core Security Testing Modules
+### Critical Security Tests
 
-- **Authentication Testing**
+- **Authentication Testing** (`tests/critical/authentication.py`)
   - Password policy validation
   - Session management
   - Multi-factor authentication
   - Account lockout mechanisms
   - Password reset functionality
 
-- **API Security Testing**
+- **Authorization Testing** (`tests/critical/authorization.py`)
+  - Role-based access control
+  - Privilege escalation detection
+  - Resource access control
+  - API authorization
+
+- **Session Management** (`tests/critical/session_management.py`)
+  - Session fixation prevention
+  - Session timeout enforcement
+  - Concurrent session handling
+  - Cookie security attributes
+
+### High Priority Tests
+
+- **API Security** (`tests/high/api_security.py`)
   - Endpoint authentication
   - Rate limiting
   - Input validation
   - Response sanitization
   - API version security
 
-- **File Upload Security**
-  - File type validation
-  - Content verification
-  - Malware scanning
-  - Size restrictions
-  - Path traversal prevention
-
-- **XSS Testing**
-  - Reflected XSS detection
-  - Stored XSS detection
-  - DOM-based XSS detection
-  - Input sanitization
-  - Output encoding
-
-- **CSRF Testing**
-  - Token validation
-  - Origin verification
-  - SameSite cookie checks
-  - Referrer policy validation
-  - Double submit cookie pattern
-
-- **Information Gathering**
-  - Robots.txt exposure
-  - Sitemap.xml exposure
-  - Common sensitive files
-  - Technology fingerprinting
-  - User agent detection
-
-- **Configuration Management**
-  - HTTP methods testing
-  - Security headers validation
-  - File extension handling
-  - Directory listing exposure
-  - Error handling and information disclosure
-
-- **AI Security Testing**
-  - Prompt injection detection
-  - Model security validation
-  - Output validation
-  - Supply chain security
-  - Access control verification
-  - Content safety checks
-  - Bias detection
-  - Adversarial attack testing
-
-## 🎯 Recent Security Breaches & Prevention
-
-### AI/LLM Security Incidents
-1. **ChatGPT Data Leak (2023)**
-   - Issue: Users could see other users' chat history
-   - Prevention: Implemented in our framework through:
-     - Strict access control testing
-     - Data isolation verification
-     - Session management checks
-
-2. **Bard AI Misinformation (2023)**
-   - Issue: AI generated false information about stock prices
-   - Prevention: Enhanced through:
-     - Output validation testing
-     - Fact-checking mechanisms
-     - Source verification
-
-3. **DALL-E Prompt Injection (2023)**
-   - Issue: Users bypassed content filters
-   - Prevention: Implemented via:
-     - Advanced prompt injection testing
-     - Content safety validation
-     - Filter bypass detection
-
-4. **Claude Data Extraction (2023)**
-   - Issue: Users extracted training data
-   - Prevention: Addressed through:
-     - Model inversion testing
-     - Training data protection
-     - Privacy boundary checks
+- **Data Protection** (`tests/high/data_protection.py`)
+  - Data encryption (in transit and at rest)
+  - Data integrity checks
+  - Data retention policies
+  - Access control mechanisms
 
 ## 📊 Framework Architecture
 
 ```mermaid
 graph TD
-    A[WebSec-AI Framework] --> B[Core Security Tests]
-    A --> C[AI/LLM Security Tests]
-    A --> D[Network Security]
-    A --> E[Reporting System]
+    A[WebSec-AI Framework] --> B[Critical Tests]
+    A --> C[High Priority Tests]
+    A --> D[Test Organization]
     
     B --> B1[Authentication]
-    B --> B2[API Security]
-    B --> B3[File Upload]
-    B --> B4[XSS/CSRF]
+    B --> B2[Authorization]
+    B --> B3[Session Management]
     
-    C --> C1[Prompt Injection]
-    C --> C2[Model Security]
-    C --> C3[Output Validation]
-    C --> C4[Bias Detection]
+    C --> C1[API Security]
+    C --> C2[Data Protection]
     
-    D --> D1[Port Scanning]
-    D --> D2[SSL/TLS]
-    D --> D3[DNS Security]
-    
-    E --> E1[HTML Reports]
-    E --> E2[JSON Reports]
-    E --> E3[Security Metrics]
+    D --> D1[Cleanup]
+    D --> D2[Organization]
 ```
 
 ## 🛠️ Installation
@@ -147,88 +82,71 @@ cd WebSec-AI
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Configure your settings
-cp config.example.py config.py
-# Edit config.py with your settings
 ```
 
 ## 📋 Requirements
 
 - Python 3.8+
 - Dependencies listed in `requirements.txt`
-- OpenAI API key (for AI security testing)
 - Target web application URL
 
 ## 🚀 Usage
 
 ```bash
 # Run all security tests
-python run_security_tests.py
+python -m pytest tests/
 
-# Run specific test modules
-python -m pytest tests/test_authentication.py
-python -m pytest tests/test_api_security.py
-python -m pytest tests/test_file_upload.py
-python -m pytest tests/test_xss.py
-python -m pytest tests/test_csrf.py
-python -m pytest tests/test_info_gathering.py
-python -m pytest tests/test_config_management.py
-python -m pytest tests/test_ai_security.py
+# Run specific test categories
+python -m pytest tests/critical/  # Critical security tests
+python -m pytest tests/high/     # High priority tests
+
+# Run individual test modules
+python -m pytest tests/critical/authentication.py
+python -m pytest tests/critical/authorization.py
+python -m pytest tests/critical/session_management.py
+python -m pytest tests/high/api_security.py
+python -m pytest tests/high/data_protection.py
 ```
 
 ## 📊 Test Coverage
 
-Our framework provides comprehensive coverage of OWASP Top 10 vulnerabilities and beyond:
+Our framework provides comprehensive coverage of critical security aspects:
 
-1. **Information Gathering**
-   - Directory and file discovery
-   - Technology stack identification
-   - Sensitive information exposure
-   - User agent manipulation
-
-2. **Configuration Management**
-   - Server configuration
-   - Security headers
-   - HTTP methods
-   - Error handling
-   - File handling
-
-3. **Authentication & Authorization**
+1. **Authentication & Authorization**
    - Password policies
    - Session management
    - Access control
    - MFA implementation
 
-4. **Input Validation**
-   - SQL Injection
-   - XSS vulnerabilities
-   - File upload security
-   - API input validation
+2. **API Security**
+   - Endpoint authentication
+   - Rate limiting
+   - Input validation
+   - Response sanitization
 
-5. **AI Security**
-   - Prompt injection
-   - Model security
-   - Output validation
-   - Bias detection
-   - Adversarial attacks
+3. **Data Protection**
+   - Data encryption
+   - Data integrity
+   - Access control
+   - Retention policies
 
 ## 🔒 Security Best Practices
 
-- Regular security updates
-- Automated vulnerability scanning
-- Continuous integration testing
-- AI-powered threat detection
-- Comprehensive reporting
+- All tests are non-destructive by default
+- Rate limiting for aggressive tests
+- Proper error handling and logging
+- Secure credential management
 
-## 📝 Reporting
+## 📝 Test Results
 
-The framework generates detailed reports including:
-- Vulnerability severity levels
-- Affected components
-- Recommended fixes
-- AI-generated remediation steps
-- Historical trend analysis
+Test results are provided in a structured format:
+```python
+{
+    "test_name": "Test Name",
+    "status": "PASSED/FAILED/ERROR",
+    "details": "Detailed test results"
+}
+```
 
 ## 🤝 Contributing
 
@@ -248,10 +166,9 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## �� Acknowledgments
 
 - OWASP for security guidelines
-- OpenAI for AI capabilities
 - Security research community
 
 ---
